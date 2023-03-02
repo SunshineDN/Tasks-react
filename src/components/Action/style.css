@@ -1,3 +1,12 @@
 .title, .desc, button {
     margin: 0 10px;
 }
+
+.act {
+    margin: 0 auto;
+    align-items: center;
+    width: 50em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
