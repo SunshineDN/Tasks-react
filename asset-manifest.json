@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/SunshineDN.github.io/Tasks/static/css/main.9d599fb0.css",
-    "main.js": "/SunshineDN.github.io/Tasks/static/js/main.5183ab81.js",
-    "index.html": "/SunshineDN.github.io/Tasks/index.html",
-    "main.9d599fb0.css.map": "/SunshineDN.github.io/Tasks/static/css/main.9d599fb0.css.map",
-    "main.5183ab81.js.map": "/SunshineDN.github.io/Tasks/static/js/main.5183ab81.js.map"
+    "main.css": "/Tasks/static/css/main.9d599fb0.css",
+    "main.js": "/Tasks/static/js/main.5183ab81.js",
+    "index.html": "/Tasks/index.html",
+    "main.9d599fb0.css.map": "/Tasks/static/css/main.9d599fb0.css.map",
+    "main.5183ab81.js.map": "/Tasks/static/js/main.5183ab81.js.map"
   },
   "entrypoints": [
     "static/css/main.9d599fb0.css",
