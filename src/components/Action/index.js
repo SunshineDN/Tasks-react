@@ -22,17 +22,14 @@ export default function Action() {
         if (title === "" || desc === "" || chooseDate === "") {
             return
         }
-        
-        let date = new Date().toLocaleString("pt-BR").split(",").join("");
-        let newDate = chooseDate.split("T").join(" ");
+        let newDate = chooseDate.split("T");
+        const formatedDate = newDate[0].split("-").reverse().join("/");
+        newDate[0] = formatedDate;
 
         const r = Math.floor(Math.random() * 255 + 1);
         const g = Math.floor(Math.random() * 255 + 1);
         const b = Math.floor(Math.random() * 255 + 1);
-        const color = `rgba(${r}, ${g}, ${b}, .5)`
-
-        console.log(Math.abs(date[0] - newDate[0]))
-        setTasks([{ id: id, title: title, description: desc, date: date, chooseDate: chooseDate.split("T").join(" "), color: color }, ...tasks]);
+        setTasks([{ id: id, title: title, description: desc, printDate: newDate.join(" "), chooseDate: chooseDate.split("T").join(" "), color: {r, g, b, a: .5} }, ...tasks]);
         setId(e => e += 1)
         clear();
     }
@@ -71,7 +68,7 @@ export default function Action() {
                     <input type="submit" className="addBtn" onClick={handleAdd} value="Adicionar" />
                 </form>
             </div>
-            {tasks.map(t => <div key={t.id}><Tasks title={t.title} desc={t.description} randomColor={t.color} date={t.date} chooseDate={t.chooseDate}></Tasks><button className="removeBtn" onClick={e => handleClearTask(t)}>X</button></div>)}
+            {tasks.map(t => <div className="component-container" key={t.id}><Tasks title={t.title} desc={t.description} randomColor={t.color} printDate={t.printDate} date={t.date} chooseDate={t.chooseDate}></Tasks><button className="removeBtn" onClick={e => handleClearTask(t)}>X</button></div>)}
         </div>
     )
 }
