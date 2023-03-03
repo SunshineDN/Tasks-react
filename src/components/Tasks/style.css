@@ -1,3 +1,16 @@
 .tasks-container {
-    text-align: center;
+    backdrop-filter: blur(20px);
+    display: flex;
+    border: 2px solid rgb(255,255,255,0.5);
+    color: #162938;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.text-box p {
+    width: 100%;
+    line-break: anywhere;
+    margin-left: 10px;
 }

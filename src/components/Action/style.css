@@ -50,14 +50,17 @@
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    font-size: 1em;
+    font-size: 1.1em;
     color: #0d1c4e;
-    font-weight: 500;
+    font-weight: 700;
     pointer-events: none;
     transition: 0.5s;
 }
 
 .input-box input {
+    padding: 0 6px;
+    font-size: 1.05em;
+    color: #fff;
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -65,8 +68,12 @@
     outline: none;
 }
 
-.input-box input:focus, input:valid ~ label{
+.input-box input:focus ~ label, input:valid ~ label{
     top: -5px;
+}
+
+.wrapper .date {
+    transition: 0.3s;
 }
 
 .wrapper .date::-webkit-calendar-picker-indicator {
@@ -80,4 +87,22 @@
 
 .wrapper .date::-webkit-calendar-picker-indicator:hover {
     opacity: 1
+}
+
+.addBtn{
+    width: 100%;
+    height: 45px;
+    background-color: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.addBtn:active {
+    background-color: #203c53;
 }
