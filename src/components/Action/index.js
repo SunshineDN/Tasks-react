@@ -6,8 +6,9 @@ export default function Action() {
     const [id, setId] = useState(1)
     const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
-    const [chooseDate, setChooseDate] = useState("");
+    const [chooseDate, setChooseDate] = useState(new Date().toLocaleString());
     const [tasks, setTasks] = useState([]);
+    const actualDate = new Date().toISOString().slice(0, 16);
 
     const [styleTransparent, setStyleTransparent] = useState({color: "transparent"})
 
@@ -61,7 +62,7 @@ export default function Action() {
                         <label>Descrição</label>
                     </div>
                     <div className="input-box">
-                        <input className="date" style={styleTransparent} type="datetime-local" value={chooseDate} onChange={e => setChooseDate(e.target.value, handleChangeColor(e.target.value))} required />
+                        <input className="date" style={styleTransparent} type="datetime-local" value={chooseDate} min={actualDate} onChange={e => setChooseDate(e.target.value, handleChangeColor(e.target.value))} required />
                         <label>Data limite</label>
                     </div>
 
